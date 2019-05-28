@@ -3,9 +3,9 @@ name: default
 
 steps:
     - name: build
-      image: maven:3-jdk-8
+      image: maven:3.5.0-alpine
       commands:
-      - mvn clean
+      - mvn -B clean package
       - mvn install
     
     - name: docker
