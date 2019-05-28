@@ -5,8 +5,7 @@ steps:
     - name: build
       image: openjdk:8-jdk
       commands:
-      - chmod +x ./mvn
-      - ./mvn clean install
+      - mvn clean install
     
     - name: docker
       image: plugins/docker
