@@ -3,8 +3,9 @@ name: default
 
 steps:
     - name: build
-      image: maven:3-jdk-10
+      image: maven
       commands:
+      - chmod +x mvn
       - mvn clean install
     
     - name: docker
