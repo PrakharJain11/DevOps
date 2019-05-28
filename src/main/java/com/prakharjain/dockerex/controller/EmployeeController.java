@@ -1,14 +1,8 @@
 package com.prakharjain.dockerex.controller;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
-
-import com.prakharjain.dockerex.exceptionHandling.ResourceNotFoundException;
-import com.prakharjain.dockerex.modal.Employee;
-//import com.prakharjain.dockerex.service.EmployeeService;
-import com.prakharjain.dockerex.service.EmployeeServiceException;
 
 @RestController
 public class EmployeeController {
@@ -19,7 +13,7 @@ public class EmployeeController {
 	@RequestMapping(value="/hi", method=RequestMethod.GET)
 	public String sayHi()
 	{
-		return "Hi";
+		return "Hi Buddy";
 	}
 	
    /* //Happy path, an employee is returned as response
