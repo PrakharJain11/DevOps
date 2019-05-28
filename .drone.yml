@@ -3,10 +3,10 @@ name: default
 
 steps:
     - name: build
-      image: maven
+      image: maven:3-jdk-10
       commands:
-      - mvn mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
-      - mvn test -B
+      - mvn clean
+      - mvn install
     
     - name: docker
       image: plugins/docker
