@@ -5,7 +5,8 @@ steps:
     - name: build
       image: maven
       commands:
-      - mvn clean install
+      - mvn mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
+      - mvn test -B
     
     - name: docker
       image: plugins/docker
