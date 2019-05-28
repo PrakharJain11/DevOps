@@ -5,7 +5,6 @@ steps:
     - name: build
       image: maven
       commands:
-      - chmod +x mvn
       - mvn clean install
     
     - name: docker
