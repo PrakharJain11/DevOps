@@ -2,10 +2,10 @@ kind: pipeline
 name: default
 
 steps:
--   name: build
-    commands:
-    - chmod +x ./mvn
-    - ./mvn clean install
+    - name: build
+      commands:
+      - chmod +x ./mvn
+      - ./mvn clean install
     
     - name: docker
       image: plugins/docker
